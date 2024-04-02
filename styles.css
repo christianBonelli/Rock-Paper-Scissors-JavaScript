@@ -1,0 +1,197 @@
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px; 
+}
+
+.player-score,
+.opponent-score {
+    margin: 0 10px; /
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player,
+.opponent {
+    margin: 10px auto; /* Ridotti gli spazi tra i giocatori e il contenuto adiacente */
+}
+
+.opponent-options {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Ridotto lo spazio tra le opzioni dell'avversario e il contenuto successivo */
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px; /* Ridotto lo spazio tra le carte e il contenuto adiacente */
+    margin-bottom: 10px; /* Ridotto lo spazio tra le carte e il contenuto adiacente */
+}
+
+.card {
+    width: 120px;
+    height: 160px;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    transition: transform 0.5s ease;
+    transform: translateY(100px);
+}
+
+.distributed {
+    transform: translateX(0);
+}
+
+.hidden {
+    visibility: hidden;
+    transform: translateX(-100%);
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+.close {
+    color: #000000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.close:hover,
+.close:focus {
+    color: #060000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+}
+
+button {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff4d3f;
+}
+
+h1,
+h2 {
+    font-family: 'Comic Sans MS', cursive;
+    color: #333;
+}
+
+p {
+    font-family: 'Comic Sans MS', cursive;
+    color: #666;
+}
+html, body {
+    height: 100%;
+}
+
+/* Media query per adattare lo stile in base alle dimensioni dello schermo */
+@media screen and (max-width: 768px) {
+    .container {
+        text-align: center;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        height: auto;
+    }
+
+    body {
+        background-color: #fff;
+        margin: 0;
+    }
+
+    .options {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 90px;
+        height: 120px;
+        font-size: 18px;
+    }
+
+    .choose-points,
+    #tutorial-btn,
+    #start-game-btn {
+        font-size: 20px;
+        padding: 15px 30px;
+        display: block;
+        margin: 10px auto; /* Modificato il margine */
+        margin-top: 10px;
+    } 
+
+    .choose-points {
+        font-size: 30px;
+    }
+
+    #points {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .score {
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .content-after-score {
+        margin-top: 5px;
+    }
+}
+

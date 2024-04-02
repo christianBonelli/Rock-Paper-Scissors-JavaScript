@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sezione per i punteggi -->
+        <div class="score-container">
+            <h1>Rock Paper Scissors</h1>
+            <div class="score hidden">
+                <div class="player-score">
+                    <h2>Your Score:</h2>
+                    <span id="player-score">0</span>
+                </div>
+                <div class="opponent-score">
+                    <h2>Opponent Score:</h2>
+                    <span id="opponent-score">0</span>
+                </div>
+            </div>
+            <div class="content-after-score"></div>
+        </div>
+        
+        <!-- Sezione per il gioco -->
+        <div class="game-container hidden" id="game-container">
+            <div class="opponent">
+                <h2>Opponent</h2>
+                <div class="options" id="opponent-options">
+                    <!-- Opponent options will be added here -->
+                </div>
+            </div>
+            <div class="result" id="result"></div>
+            <div class="player">
+                <h2>You</h2>
+                <div class="options" id="player-options">
+                    <!-- Player options will be added here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Sezione per iniziare una nuova partita -->
+        <div class="choose-points" id="choose-points">
+            <label for="points">Choose Points:</label>
+            <select id="points">
+                <option value="3">3</option>
+                <option value="5">5</option>
+            </select>
+            <button id="start-game-btn" onclick="startGame()">Start Game</button>
+            <!-- Button to open tutorial modal -->
+            <button id="tutorial-btn">Tutorial</button>
+        </div>
+
+        <!-- Sezione per il tutorial -->
+        <div id="tutorial-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Tutorial</h2>
+                <!-- Contenuto del tutorial -->
+                <h1>Rock Paper Scissors</h1>
+                <h2>Game Rules:</h2>
+                <p>Choosing Cards: Each turn, you will receive three cards to choose from. Select the card you want to play by clicking on it.</p>
+                <p>Winning the Game: To win, you must choose a card that beats the computer's card. Remember that "Rock" beats "Scissors," "Scissors" beats "Paper," and "Paper" beats "Rock."</p>
+                <p>Scoring: Your score will increase each time you win a turn. Try to reach the desired score before the computer does!</p>
+
+                <h2>How to Play:</h2>
+                <p>Selecting Points: Before starting, choose how many points you want to reach to win the game.</p>
+                <p>Starting the Game: Click on "Start Game" to begin. You will be presented with cards to choose from.</p>
+                <p>Choose a Card: Click on the card you want to play for that turn.</p>
+                <p>Winning the Game: Keep playing until you reach the desired score or until the computer does so before you.</p>
+                <p>Good luck and have fun playing!</p>
+            </div>
+        </div>
+
+        <!-- Pulsante per ricominciare una partita -->
+        <button onclick="restartGame()" class="hidden" id="restart-btn">Restart Game</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="modal.js"></script>
+</body>
+</html>
